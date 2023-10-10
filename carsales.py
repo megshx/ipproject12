@@ -7,7 +7,7 @@ csv=(pd.read_csv('/storage/emulated/0/fifa 23/Car_sales.csv'))
 df=pd.DataFrame(csv)
 
 while True :
-	print('\nWELCOME TO THE MAIN MENU')
+	print('\n \n WELCOME TO THE MAIN MENU')
 	print('\n 1) SHOW COLUMNS')
 	print('\n 2) SHOW TOP ROWS')
 	print('\n 3) SHOW BOTTOM ROWS')
@@ -17,9 +17,9 @@ while True :
 	print('\n 7) COMPLETE DATASET')
 	print('\n 8) CREDITS AND ABOUT THE PROJECT')
 
-	a=int(input('\n Enter Your Choice>>> '))
+	a=(input('\n Enter Your Choice>>> '))
 
-	if a==1:
+	if a=='1':
 		print('Manufacturer, Model, Sales_in_thousands, Price_in_thousands, Horsepower, Fuel_capacity')
 		print('\n \nEnter 1 to return back to the Main Menu.')
 		print('Enter 2 to exit the code.')
@@ -35,9 +35,9 @@ while True :
 			print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 			break 
 			
-	elif a==2:
+	elif a=='2':
 		n=int(input("\n Enter Total number of rows you want to see:"))
-		print(df.head(n))
+		print(df[['Manufacturer', 'Model', 'Sales_in_thousands', 'Price_in_thousands', 'Horsepower', 'Fuel_capacity']].head(n))
 		print('\n \nEnter 1 to return back to the Main Menu.')
 		print('Enter 2 to exit the code.')
 		b=int(input('>>>'))
@@ -52,9 +52,9 @@ while True :
 			print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 			break 
 	
-	elif a==3:
+	elif a=='3':
 		n=int(input('\n Enter Total number of rows you want to see:'))
-		print(df.tail(n))
+		print(df[['Manufacturer', 'Model', 'Sales_in_thousands', 'Price_in_thousands', 'Horsepower', 'Fuel_capacity']].tail(n))
 		print('\n \nEnter 1 to return back to the Main Menu.')
 		print('Enter 2 to exit the code.')
 		b=int(input('>>>'))
@@ -69,7 +69,7 @@ while True :
 			print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 			break 
 	
-	elif a==4:
+	elif a=='4':
 		print('Manufacturer, Model, Sales_in_thousands, Price_in_thousands, Horsepower, Fuel_capacity')
 		col=input('\n Enter Column name that you want to see: ')
 		print(df[col])
@@ -87,7 +87,7 @@ while True :
 			print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 			break 
 			
-	elif a==5:
+	elif a=='5':
 		z=input('\n Enter Manufacturer Name >>>')
 		y=input('\n Enter Model Name >>>')
 		x=input('\n Enter Sales_In_Thousands >>>')
@@ -103,7 +103,7 @@ while True :
 		result.to_csv('/storage/emulated/0/fifa 23/Car_sales.csv')
 		break 
 			
-	elif a==6: 
+	elif a=='6': 
 		print(df.loc[:,['Manufacturer', 'Model', 'Sales_in_thousands', 'Price_in_thousands', 'Horsepower', 'Fuel_capacity']])
 		csv1=(pd.read_csv('/storage/emulated/0/fifa 23/Car_sales.csv'))
 		df1=pd.DataFrame(csv1)
@@ -121,7 +121,7 @@ while True :
 		print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 		break 
 			
-	elif a==7:
+	elif a=='7':
 		print('\n')
 		print(df.loc[:,['Manufacturer', 'Model', 'Sales_in_thousands', 'Price_in_thousands', 'Horsepower', 'Fuel_capacity']])
 		print('\n \nEnter 1 to return back to the Main Menu.')
@@ -138,7 +138,7 @@ while True :
 			print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 			break 
 			
-	elif a==8:
+	elif a=='8':
 		print('Made By Meghansh Sharma | Class 12 Alpha \nSession : 2023-24 \nThe Project helps us to manage a complete database of a car dealership. It allows you to create new records and also delete records. It automatically saves all the changes to the Csv file. Thank You for Using and I hope the project left a positive impression on you.')
 		print('\n \nEnter 1 to return back to the Main Menu.')
 		print('Enter 2 to exit the code.')
@@ -154,7 +154,7 @@ while True :
 			print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 			break 
 		
-	elif a==9:
+	elif a=='9':
 		print('Thank You for using.\n Made By : Meghansh Sharma | Class 12 Alpha')
 		break
 		
@@ -164,5 +164,5 @@ while True :
 				for c in s:
 					sys.stdout.write(c)
 					sys.stdout.flush()
-					time.sleep(0.2)
+					time.sleep(0.05)
 		delay_print("Please Choose a Valid Option. Redirecting to the Main Menu...")	
